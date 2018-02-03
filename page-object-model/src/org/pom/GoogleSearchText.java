@@ -1,11 +1,14 @@
-package com.example;
+package org.pom;
 
+import org.ddt.ExcelReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class GoogleSearchText {
     // Web driver instance
     public static WebDriver driver = new ChromeDriver();
+    public static ExcelReader excel = new ExcelReader(
+            "C:\\dev\\grasp-selenium-java\\page-object-model\\src\\data\\app.xls");
 
     public static void main(String[] args) throws InterruptedException {
         // Google home page object
@@ -15,7 +18,10 @@ public class GoogleSearchText {
         driver.navigate().to("http://www.google.co.in");
 
         // Call page object function to perform search operation
-        home.searchGoogle("selenium");
+        int colIdx = excel.getColumnIndex("SearchTerms");
+        String data = excel.getCellValue(colIdx, 1);
+
+        home.searchGoogle(data);
 
         // click on selenium link and assign retured page object in test
         SeleniumHomePageObject seleniumPage = home.clickSeleniumLink(driver);

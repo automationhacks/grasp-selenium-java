@@ -9,5 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="client-combined-3.8.1" level="application" />
     <orderEntry type="library" name="selenium-server-standalone-3.8.1" level="application" />
+    <orderEntry type="library" name="jxl" level="application" />
   </component>
 </module>
