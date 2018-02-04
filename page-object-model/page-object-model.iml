@@ -10,5 +10,15 @@
     <orderEntry type="library" name="client-combined-3.8.1" level="application" />
     <orderEntry type="library" name="selenium-server-standalone-3.8.1" level="application" />
     <orderEntry type="library" name="jxl" level="application" />
+    <orderEntry type="module-library">
+      <library name="testng">
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/testng/lib/testng.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/testng/lib/jcommander.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
